@@ -161,9 +161,15 @@ function ShowAdVideo() {
     .catch(error => VideoErrol());
 	}
 
-function	ShowPodel(messeg){
-	vkBridge.send("VKWebAppShowWallPostBox", {"message": messeg});
-	}
+	function	ShowPodel(messeg){
+//vkBridge.send("VKWebAppShowWallPostBox", {"message": messeg});
+
+	vkBridge.send("VKWebAppShowWallPostBox", {
+	  "message": messeg,
+	  "attachments": "https://vk.com/app8183851"
+	});
+		}
+
 function	ShowTableBast(){
 	vkBridge.send("VKWebAppShowLeaderBoardBox", {user_result:0})
          .then(data => console.log(data.success))
