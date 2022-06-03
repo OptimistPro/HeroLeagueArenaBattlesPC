@@ -174,12 +174,12 @@ function	ShowInviteBox(){
 	vkBridge.send("VKWebAppShowInviteBox", {})
          .then(data => console.log(data.success))
         .catch(error => console.log(error));
-}
+		}
 
-function order() {
+function order(item_shop) {
     vkBridge.send("VKWebAppShowOrderBox", {
   type: "item",
-  item: "item1"
+  item: item_shop
 })
 .then(data => VideoClose(data.status))
 .catch(error => VideoErrol(error));
@@ -255,7 +255,7 @@ var coins_add = new Howl({src: ['sounds/coins_add.mp3'], loop: false});
 	<script type='text/javascript' src='index.js'></script>
 	<script type='text/javascript'>//<![CDATA[
 
-		const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":9579040,"index.wasm":11795315},"focusCanvas":true,"gdnativeLibs":[]};
+		const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":9579072,"index.wasm":11795315},"focusCanvas":true,"gdnativeLibs":[]};
 		var engine = new Engine(GODOT_CONFIG);
 
 		(function() {
