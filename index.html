@@ -164,8 +164,8 @@ function ShowAdVideo() {
 function	ShowPodel(messeg){
 	vkBridge.send("VKWebAppShowWallPostBox", {"message": messeg});
 	}
-function	ShowTableBast(score){
-	vkBridge.send("VKWebAppShowLeaderBoardBox", {user_result:score})
+function	ShowTableBast(){
+	vkBridge.send("VKWebAppShowLeaderBoardBox", {user_result:0})
          .then(data => console.log(data.success))
         .catch(error => console.log(error));
 	}
