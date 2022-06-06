@@ -144,7 +144,6 @@ function VideoErrol() {
    reklama_video=1
 }
 
- vkBridge.send("showSettingsBox", 256);
 
 function ShowAd() {
 	     vkBridge.send("VKWebAppCheckNativeAds", {"ad_format": "interstitial"});
@@ -172,9 +171,13 @@ function ShowAdVideo() {
 		}
 
 function	ShowTableBast(){
-	vkBridge.send("VKWebAppShowLeaderBoardBox", {user_result:0})
-         .then(data => console.log(data.success))
-        .catch(error => console.log(error));
+	bridge.send("VKWebAppShowInviteBox", {})
+	         .then(data => console.log(data.success))
+	        .catch(error => console.log(error));
+
+	//vkBridge.send("VKWebAppShowLeaderBoardBox", {user_result:0})
+//         .then(data => console.log(data.success))
+//        .catch(error => console.log(error));
 	}
 
 function	ShowInviteBox(){
